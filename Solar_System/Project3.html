@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style3.css">
+
+
+
+
+    <script>
+
+        function my_func(a){
+
+            let weight = document.getElementById("input_box").value;
+            // weight = Number(weight);
+            // alert(weight);
+            
+            if(a=='sun'){
+                 weight = weight*27.01;
+                // console.log(weight);
+                // alert(weight);
+            } 
+            
+            else if(a=='mercury'){
+                weight = weight*0.38;
+                // alert(weight);
+
+            }
+
+            else if(a=='venus'){
+                weight = weight*0.91;
+                // alert(weight);
+
+            }
+
+            else if(a=='earth'){
+                weight = weight*1.0;
+                // alert(weight);
+
+            }
+
+            else if(a=='mars'){
+                weight = weight*0.38;
+                // alert(weight);
+                
+            }
+
+            else if(a=='jupiter'){
+                weight = weight*2;
+                // alert(weight);
+                
+            }
+
+            else if(a=='saturn'){
+                weight = weight*1.06;
+                // alert(weight);
+            }
+
+            else if(a=='uranus'){
+                weight = weight*0.92;
+                // alert(weight);
+            }
+            
+            else if(a=='neptune'){
+                weight = weight*1.19;
+                // alert(weight);
+            }
+
+            else if(a=='pluto'){
+                weight = weight*0.06;
+                // alert(weight);
+            }
+
+            document.getElementById('output').innerHTML = "Weight on " + a + " is " + weight + " Kg";
+        }
+
+
+       
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="parent">
+                <div class="universe">
+                    <img src="./images/pexels-felix-mittermeier-956981.jpg" style="border-radius: 0px;">
+                </div>
+
+                <div class="sun">
+                    <img id="sun" src="./images/sun.jpg" onclick="my_func('sun')">
+                </div>
+
+                <div class="mercury">
+                    <img id="mercury" src="./images/mercury.jpg" onclick="my_func('mercury')">
+                </div>
+
+                <div class="venus">
+                    <img id="venus" src="./images/venus.jpg" onclick="my_func('venus')">
+                </div>
+
+                <div class="earth">
+                    <img id="earth" src="./images/earth.jpg" onclick="my_func('earth')">
+                </div>
+
+                <div class="mars">
+                    <img id="mars" src="./images/mars.jpg" onclick="my_func('mars')">
+                </div>
+
+                <div class="jupiter">
+                    <img id="jupiter" src="./images/jupiter.jpg" onclick="my_func('jupiter')">
+                </div>
+
+                <div class="saturn">
+                    <img id="saturn" src="./images/new.png" onclick="my_func('saturn')">
+                </div>
+
+                <div class="uranus">
+                <img id="uranus" src="./images/uranus.jpg" onclick="my_func('uranus')">
+
+                </div>
+                <div class="neptune">
+                    <img id="neptune" src="./images/neptune.jpg" onclick="my_func('neptune')">
+                </div>
+
+                <div class="pluto">
+                    <img id="pluto" src="./images/pluto.jpg" onclick="my_func('pluto')">
+                </div>
+
+            </div>  
+
+
+
+            <div class="my_content">
+                <div style="color: white;">
+                    <h2>Enter the Weight on Earth</h2>
+                </div>
+    
+                <div class="input_box">
+                    <input type="number" id="input_box">
+                </div>
+    
+    
+                <div style="color: white;position: fixed;">
+                    <h2 id="output"></h2>
+                </div>
+                
+            </div>
+           
+   
+            
+        </div>
+
+   
+
+    </div>
+
+
+    
+    
+</body>
+</html>
